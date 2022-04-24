@@ -1,13 +1,88 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    /* Colors */
+    --light: #F4F1DE;
+    --dark: #3D405B;
+    --terra: #E07A5F;
+    --green: #81B29A;
+    --yellow: #F2CC8F;
+    --white: #FFFFFF;
+    --black: #000000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    box-sizing: border-box;
+    color: var(--dark);
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    margin: 0;
+    padding: 4em;
+}
+
+p,
+li {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid var(--dark);
+    border-radius: 2px;
+    font-size: 1em;
+    margin-bottom: 0.2em;
+    padding: 0.4em;
+    width: 100%;
+}
+
+input::placeholder {
+    font-size: 0.8em;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    background-color: var(--terra);
+    border: none;
+    color: var(--light);
+    margin: 0.5em;
+    padding: 0.5em 1.5em;
+}
+
+button:hover {
+    background-color: var(--green);
+    color: var(--light);
+    cursor: pointer;
+}
+
+.card__grid {
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--white);
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 50%);
+    color: var(--dark);
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    margin: 0.4em 0.4em 0.4em 0;
+}
+
+.card p {
+    padding: 0.5em;
+    margin: 0;
+}
+
+.card img {
+    height: 140px;
+    padding: 0.5em;
+    object-fit: cover;
+    width: auto;
 }
